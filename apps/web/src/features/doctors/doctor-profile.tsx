@@ -25,7 +25,11 @@ export function DoctorProfile({ doctorId }: { doctorId: string }) {
       icon: Mail,
       label: 'Email',
       value: (
-        <a href={`mailto:${doctor.email}`} className="break-all hover:underline">
+        <a
+          href={`mailto:${doctor.email}`}
+          title={doctor.email}
+          className="block truncate hover:underline"
+        >
           {doctor.email}
         </a>
       ),
