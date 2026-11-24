@@ -2,6 +2,7 @@
   "name": "doctor-tracker",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@11.29.0",
   "engines": {
     "node": ">=22.9"
   },
@@ -15,13 +16,6 @@
     "format:check": "prettier --check .",
     "seed": "pnpm --filter @doctor-tracker/api seed",
     "db:indexes": "pnpm --filter @doctor-tracker/api db:indexes"
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.18.0",
-      "onFail": "download"
-    }
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
