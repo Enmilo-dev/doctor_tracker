@@ -1,0 +1,10 @@
+packages:
+  - apps/*
+  - packages/*
+
+catalog:
+  zod: 4.6.7
+
+allowBuilds:
+  argon2: true
+  esbuild: true
