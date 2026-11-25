@@ -2,7 +2,11 @@
 
 Doctor Tracker is an admin portal for managing doctors and their patients. An admin signs in, adds doctors, registers patients under a doctor and manages everyone through lists that can be searched, filtered and paginated. The dashboard shows total doctors and patients, admissions per month, the busiest doctors and how patients are spread across conditions and specializations. The frontend is a Next.js app and the backend is a separate Express API with MongoDB.
 
+Live demo: https://doctor-tracker-ten-mu.vercel.app
+
 Demo login: `admin@doctortracker.dev` / `Admin@12345`
+
+The API runs on Render's free plan, so the first request after it has been idle can take up to a minute.
 
 ## Tech stack
 
