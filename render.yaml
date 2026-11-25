@@ -4,7 +4,7 @@ services:
     runtime: node
     region: singapore
     plan: free
-    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @doctor-tracker/api build
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @doctor-tracker/api... build
     startCommand: pnpm --filter @doctor-tracker/api start
     healthCheckPath: /api/health
     envVars:
