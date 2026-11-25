@@ -84,6 +84,13 @@ You need Node.js 22.9 or newer, pnpm 11 and a MongoDB 8 database (local, Docker 
 | `pnpm seed`       | Resets and seeds the database                                                        |
 | `pnpm db:indexes` | Creates or updates MongoDB indexes. The API `start` script runs this before starting |
 
+### Deployment
+
+- The API deploys to Render with `render.yaml`. Render generates `JWT_SECRET` and asks for `MONGODB_URI` when the blueprint is created. The start script syncs the MongoDB indexes before the server starts.
+- The web app deploys to Vercel with `apps/web` as the root directory. It needs `API_URL` pointing to the Render service.
+- The database is MongoDB Atlas. Run `pnpm seed` once against it to load the demo data.
+- Render's free plan sleeps after about 15 minutes without traffic, so the first request after that can take up to a minute.
+
 ## System architecture
 
 ```

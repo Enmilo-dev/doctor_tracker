@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: doctor-tracker-api
+    runtime: node
+    region: singapore
+    plan: free
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @doctor-tracker/api build
+    startCommand: pnpm --filter @doctor-tracker/api start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: '22.23.1'
+      - key: NODE_ENV
+        value: production
+      - key: TRUST_PROXY
+        value: '2'
+      - key: SESSION_TTL_HOURS
+        value: '24'
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MONGODB_URI
+        sync: false
